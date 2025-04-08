@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
     const aumentaFonteBtn = document.getElementById('aumentar_fonte');
+    const diminuiFonteBtn = document.getElementById('diminuir_fonte');
+    const alternarConstraste = document.getElementById('alternar_constraste');
+
+    const btnSelecionado = btnAcessibilidade.getAttribute('aria-expanded') === 'true';
+    btnAcessibilidade.setAttribute('aria-expanded', !btnSelecionado)
 
     let tamanhoAtualFonte = 1;
 
@@ -15,10 +20,8 @@ document.addEventListener('DOMContentLoaded', function(){
         tamanhoAtualFonte += 0.1; //aumenta a fonte cada vez que clicar
         document.body.style.fontSize =  `${tamanhoAtualFonte}rem`;       //modifica o body do site
     });
-});
 
 document.addEventListener('DOMContentLoaded', function(){
-    const diminuiFonteBtn = document.getElementById('diminuir_fonte');
 
     let tamanhoAtualFonte = 1;
 
@@ -26,4 +29,11 @@ document.addEventListener('DOMContentLoaded', function(){
         tamanhoAtualFonte -= 0.1;
         document.body.style.fontSize = `${tamanhoAtualFonte}rem`;
     }); 
+});
+    alternarConstraste.addEventListener('click', function(){
+        document.body.classList.toggle('alto-contraste');
+    })
+
+
+
 });
