@@ -16,20 +16,41 @@ body {
 
 header {
     background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 section {
     padding-bottom: 5rem;
 }
 
+#header_h1{
+    font-size: 50px;
+}
+
 .nav-link {
-    color: #CB6D43;
+    color: #435ecb;
     font-weight: 600;
+}
+
+.nav-link:hover{
+    transform: scale(1.6);
+}
+
+.nav-item{
+    align-items: center;
+    justify-content: center;
+}
+
+#title{
+    color: blue;
 }
 
 .inicio-fundo {
     /* aula 3 */
-    background-image: url(./../img/4965007.jpg);
+    background-image: url(https://www.mundoboaforma.com.br/wp-content/uploads/2014/12/fisiculturistas-antigamente.jpg);
     /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
@@ -51,15 +72,17 @@ section {
 
 
 .esquerda-conteudo {
+    width: 40%;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: space-around;
     gap: 1rem;
 }
 
 
 .botao-inicio {
-    background-color: var(--laranja-claro);
+    background-color: #435ecb;
     border-radius: 30px;
     border: none;
     width: 14em;
@@ -73,6 +96,12 @@ section {
     text-shadow: -5px 5px var(--laranja-claro);
 }
 
+#contato{
+    color: #435ecb;
+    text-align: center;
+    width: 40%;
+    font-size: 20px;
+}
 
 #tropicalia{
     width: 100%;
@@ -81,8 +110,8 @@ section {
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url(./../img/flor.png) top right no-repeat,
-        url(./../img/flor-esquerda.png) bottom left no-repeat;
+    background: url(https://http2.mlstatic.com/D_NQ_NP_644124-MLU70795097922_082023-O.webp) top right no-repeat,
+        url(https://http2.mlstatic.com/D_NQ_NP_644124-MLU70795097922_082023-O.webp) bottom left no-repeat;
     background-size: 180px 180px;
     /* Ajuste o tamanho conforme necessário */
     display: flex;
@@ -91,9 +120,14 @@ section {
     justify-content: space-between;
 }
 
+#tropicalia i{
+    font-size: 12px;
+    color: beige;
+}
+
 .img2{
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 40%;
     border-radius: 2vh;
 }
 
@@ -108,10 +142,9 @@ section {
 .secao-tropicalia{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     position: relative;
     z-index: 1;
-    padding-left: 3vw;
     /* Garante que o conteúdo fica acima das imagens do background */
 }
 
@@ -155,7 +188,7 @@ h2 {
     align-items: center;
     justify-content: space-around;
     padding-left: 0;
-    background: url(./../img/flor-bottom-direita.png) bottom right no-repeat;
+    /* bottom right no-repeat; */
 }
 
 #contato {
